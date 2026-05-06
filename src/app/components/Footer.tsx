@@ -1,5 +1,5 @@
 import { ChefHat } from "lucide-react";
-import parentLogo from "../../imports/Screenshot_2026-04-19_213129.svg";
+import parentLogo from "../../imports/parentimg.svg";
 
 const cols = [
   { heading: "Product", links: ["Features", "How it works"] },
@@ -42,7 +42,7 @@ export function Footer() {
         <div className="pt-8 border-t border-amber-800/60 flex flex-col items-center gap-6">
           <div className="flex items-center gap-3">
             <p style={{ fontSize: "0.8125rem" }}>Powered by</p>
-            <img src={parentLogo} alt="Parent Company" className="h-8 opacity-80" />
+            <img src={parentLogo} alt="Parent Company" className="h-20 opacity-80" />
           </div>
           <p style={{ fontSize: "0.8125rem" }}>© 2026 Recipevault. All rights reserved.</p>
         </div>
