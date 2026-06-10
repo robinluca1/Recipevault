@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Upload, Star, ArrowRight } from "lucide-react";
+import { Link } from "react-router"
 
 export function Hero() {
   return (
@@ -29,9 +30,9 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 pt-1">
-            <button className="flex items-center justify-center gap-2 px-6 py-3.5 bg-amber-400 hover:bg-amber-500 text-amber-950 rounded-xl transition-colors" style={{ fontWeight: 700 }}>
+            <Link to="onboarding" className="flex items-center justify-center gap-2 px-6 py-3.5 bg-amber-400 hover:bg-amber-500 text-amber-950 rounded-xl transition-colors" style={{ fontWeight: 700 }}>
               <Upload size={17} /> Upload your first recipe
-            </button>
+            </Link>
             <button className="flex items-center justify-center gap-2 px-6 py-3.5 bg-white border border-amber-200 hover:bg-amber-50 text-amber-800 rounded-xl transition-colors" style={{ fontWeight: 600 }}>
               See how it works <ArrowRight size={16} />
             </button>

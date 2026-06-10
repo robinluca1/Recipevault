@@ -1,8 +1,8 @@
 import { ChefHat } from "lucide-react";
-import parentLogo from "../../imports/parentimg.svg";
+import parentLogo from "../../imports/parentimg.svg"
 
 const cols = [
-  { heading: "Product", links: ["Features", "How it works"] },
+  { heading: "Product", links: ["Features", "How it works", "Recipes", "Testimonials"] },
   { heading: "Support", links: ["Help centre", "Contact"] },
 ];
 

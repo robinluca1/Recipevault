@@ -49,7 +49,7 @@ export function RecipeShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-12"
+          className="text-center mb-12"
         >
           <span className="inline-block px-4 py-1 bg-amber-100 text-amber-600 rounded-full mb-3" style={{ fontSize: "0.8125rem", fontWeight: 600 }}>
             YOUR VAULT
@@ -58,9 +58,6 @@ export function RecipeShowcase() {
             <h2 className="text-amber-950" style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 800 }}>
               Everything, beautifully organised
             </h2>
-            <button className="text-amber-600 hover:text-amber-500 transition-colors shrink-0" style={{ fontWeight: 600, fontSize: "0.9375rem" }}>
-              Open full vault →
-            </button>
           </div>
 
           {/* Group tabs */}
@@ -82,6 +79,9 @@ export function RecipeShowcase() {
                 </span>
               </button>
             ))}
+            <button className="text-amber-600 hover:text-amber-500 transition-colors shrink-0 text-right last:grow" style={{ fontWeight: 600, fontSize: "0.9375rem" }}>
+              Open  vault →
+            </button>
           </div>
         </motion.div>
 

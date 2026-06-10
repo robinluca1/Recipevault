@@ -28,13 +28,10 @@ export function CTA() {
               <button className="flex items-center justify-center gap-2 px-7 py-3.5 bg-amber-950 hover:bg-amber-900 text-amber-50 rounded-xl transition-colors" style={{ fontWeight: 600 }}>
                 <Upload size={16} /> Upload your first recipe
               </button>
-              <button className="px-7 py-3.5 bg-white/50 hover:bg-white/70 text-amber-950 rounded-xl transition-colors border border-amber-200/60" style={{ fontWeight: 600 }}>
-                Watch a demo
-              </button>
             </div>
 
             <p className="text-amber-800/60" style={{ fontSize: "0.8125rem" }}>
-              Already have an account? <span className="underline cursor-pointer hover:text-amber-900">Sign in</span>
+              Already have an account? <span className="underline cursor-pointer hover:text-amber-900">Log in</span>
             </p>
           </div>
         </motion.div>

@@ -1,11 +1,12 @@
 import { ChefHat, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { Link } from "react-router"
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
 
-  const links = ["Features", "Recipes", "How it works"];
+  const links = ["Features", "How it works", "Recipes", "Testimonials"];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-amber-900/40" style={{ background: "#461901" }}>
@@ -34,11 +35,11 @@ export function Navbar() {
 
         <div className="hidden md:flex items-center gap-3">
           <button className="px-4 py-2 text-amber-200/80 hover:text-amber-100 transition-colors" style={{ fontSize: "0.9375rem" }}>
-            Sign in
+            Log in
           </button>
-          <button className="px-5 py-2 bg-amber-400 hover:bg-amber-500 text-amber-900 rounded-xl transition-colors" style={{ fontSize: "0.9375rem", fontWeight: 600 }}>
+          <Link to="/onboarding" className="px-5 py-2 bg-amber-400 hover:bg-amber-500 text-amber-900 rounded-xl transition-colors" style={{ fontSize: "0.9375rem", fontWeight: 600 }}>
             Get started
-          </button>
+          </Link>
         </div>
 
         <button className="md:hidden text-amber-200" onClick={() => setOpen(!open)}>
