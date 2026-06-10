@@ -1,15 +1,17 @@
 import { createBrowserRouter } from "react-router";
-import { Root } from "./Root"
-import { LandingPage } from "./LandingPage";
-import { Onboarding } from "./pages/Onboarding";
+import { Root } from "./Root.tsx"
+import { Home } from "./Home.tsx";
+import { Onboarding } from "./pages/Onboarding.tsx";
+import { Login } from "./pages/Login.tsx";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         Component: Root,
         children: [
-            { index: true, Component: LandingPage },
+            { index: true, Component: Home },
             { path: "onboarding", Component: Onboarding },
+            { path: "login", Component: Login },
         ],
     },
 ]);

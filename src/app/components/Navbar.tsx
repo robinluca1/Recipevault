@@ -34,9 +34,9 @@ export function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <button className="px-4 py-2 text-amber-200/80 hover:text-amber-100 transition-colors" style={{ fontSize: "0.9375rem" }}>
+          <Link to="/login" className="px-4 py-2 text-amber-200/80 hover:text-amber-100 transition-colors" style={{ fontSize: "0.9375rem" }}>
             Log in
-          </button>
+          </Link>
           <Link to="/onboarding" className="px-5 py-2 bg-amber-400 hover:bg-amber-500 text-amber-900 rounded-xl transition-colors" style={{ fontSize: "0.9375rem", fontWeight: 600 }}>
             Get started
           </Link>

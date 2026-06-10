@@ -99,12 +99,11 @@ export function Onboarding() {
                         >
                             Create free account
                         </button>
-                        <button
-                            className="w-full py-3 border border-amber-300 hover:border-amber-400 text-amber-800 rounded-xl transition-colors bg-white/60"
+                        <Link to="/login" className="w-full py-3 border border-amber-300 hover:border-amber-400 text-amber-800 rounded-xl transition-colors bg-white/60"
                             style={{ fontWeight: 600, fontSize: "1rem" }}
                         >
                             Sign in to existing account
-                        </button>
+                        </Link>
                     </div>
 
                     <p className="text-amber-700/50 mt-6" style={{ fontSize: "0.85rem" }}>
