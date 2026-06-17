@@ -21,7 +21,7 @@ export function CTA() {
               Start building your vault today
             </h2>
             <p className="text-amber-900/70 max-w-md" style={{ fontSize: "1rem", lineHeight: 1.7 }}>
-              Free forever for up to 50 recipes. Upload your first screenshot and watch Recipevault do the work — no credit card, no setup.
+              Free forever for up to 50 recipes. Upload your first screenshot and watch RecipeVault do the work — no credit card, no setup.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3">

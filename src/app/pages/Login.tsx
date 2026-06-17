@@ -12,7 +12,7 @@ export function Login() {
                             <ChefHat size={18} className="text-amber-900" />
                         </div>
                         <span className="text-amber-50" style={{ fontWeight: 700, fontSize: "1.125rem" }}>
-              Recipevault
+              RecipeVault
             </span>
                     </Link>
                     <Link

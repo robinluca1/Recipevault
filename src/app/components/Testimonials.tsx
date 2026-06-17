@@ -7,7 +7,7 @@ const testimonials = [
     handle: "@sofiascooks",
     avatar: "SM",
     color: "bg-amber-300",
-    text: "Recipevault changed that completely — everything is in one place now. I screenshot a recipe, and within seconds I have a clean, formatted card I can actually cook from.",
+    text: "RecipeVault changed that completely — everything is in one place now. I screenshot a recipe, and within seconds I have a clean, formatted card I can actually cook from.",
     stars: 5,
   },
   {

@@ -42,7 +42,7 @@ export function ScanDemo() {
             Three steps to a clean recipe
           </h2>
           <p className="mt-3 text-amber-700/70 max-w-lg mx-auto" style={{ fontSize: "1rem", lineHeight: 1.7 }}>
-            Click through to see exactly what happens when you drop a screenshot into Recipevault.
+            Click through to see exactly what happens when you drop a screenshot into RecipeVault.
           </p>
         </motion.div>
 
@@ -82,7 +82,7 @@ export function ScanDemo() {
               <div>
                 <h3 className="text-amber-950 mb-3" style={{ fontSize: "1.375rem", fontWeight: 800 }}>Upload your screenshot</h3>
                 <p className="text-amber-700/70 mb-6" style={{ fontSize: "0.9375rem", lineHeight: 1.7 }}>
-                  Found a killer focaccia recipe on a food blog? Screenshot it — then drag it straight into Recipevault. We accept PNG, JPG, even PDFs. Any recipe, from anywhere.
+                  Found a killer focaccia recipe on a food blog? Screenshot it — then drag it straight into RecipeVault. We accept PNG, JPG, even PDFs. Any recipe, from anywhere.
                 </p>
                 <ul className="flex flex-col gap-2">
                   {["Food blog screenshots", "Instagram or TikTok captures", "Cookbook page photos", "Recipe PDFs"].map((item) => (

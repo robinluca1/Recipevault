@@ -26,7 +26,7 @@ export function Hero() {
           </h1>
 
           <p className="text-amber-800/70 max-w-md" style={{ fontSize: "1.0625rem", lineHeight: 1.7 }}>
-            Snap any recipe — from Instagram, a blog, a cookbook scan — and Recipevault's AI reads it for you. Ingredients extracted. Steps cleaned up. Saved to your personal vault in seconds.
+            Snap any recipe — from Instagram, a blog, a cookbook scan — and RecipeVault's AI reads it for you. Ingredients extracted. Steps cleaned up. Saved to your personal vault in seconds.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 pt-1">

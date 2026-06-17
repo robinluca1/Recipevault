@@ -43,7 +43,7 @@ export function Onboarding() {
                             <ChefHat size={18} className="text-amber-900" />
                         </div>
                         <span className="text-amber-50" style={{ fontWeight: 700, fontSize: "1.125rem" }}>
-              Recipevault
+              RecipeVault
             </span>
                     </Link>
                     <Link
@@ -64,7 +64,7 @@ export function Onboarding() {
                     </div>
 
                     <h1 className="text-amber-900 mb-3" style={{ fontWeight: 800, fontSize: "2rem" }}>
-                        Welcome to Recipevault
+                        Welcome to RecipeVault
                     </h1>
                     <p className="text-amber-800/70 mb-10" style={{ fontSize: "1.0625rem" }}>
                         Create your free account and start building your personal recipe collection in minutes.
@@ -93,12 +93,13 @@ export function Onboarding() {
 
                     {/* Auth options */}
                     <div className="flex flex-col gap-3">
-                        <button
+                        <Link
+                            to="/signup"
                             className="w-full py-3 bg-amber-400 hover:bg-amber-500 text-amber-900 rounded-xl transition-colors"
                             style={{ fontWeight: 700, fontSize: "1rem" }}
                         >
                             Create free account
-                        </button>
+                        </Link>
                         <Link to="/login" className="w-full py-3 border border-amber-300 hover:border-amber-400 text-amber-800 rounded-xl transition-colors bg-white/60"
                             style={{ fontWeight: 600, fontSize: "1rem" }}
                         >

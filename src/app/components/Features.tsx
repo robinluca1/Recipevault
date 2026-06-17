@@ -4,7 +4,7 @@ const features = [
   {
     emoji: "📸",
     title: "Screenshot any recipe",
-    desc: "From food blogs, Instagram, PDFs, or even a photo of a cookbook page — if you can screenshot it, Recipevault can read it.",
+    desc: "From food blogs, Instagram, PDFs, or even a photo of a cookbook page — if you can screenshot it, RecipeVault can read it.",
   },
   {
     emoji: "🔍",
