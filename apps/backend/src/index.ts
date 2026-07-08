@@ -8,14 +8,18 @@ import jwt from 'jsonwebtoken';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
-const JWT_SECRET = process.env.JWT_SECRET || 'fallback_secret';
+const port = process.env.PORT || 3000;
+const secret = process.env.JWT_SECRET
+
+if (!secret) {
+    throw new Error('JWT_SECRET is not defined in the environment variables.');
+}
 
 app.use(cors());
 app.use(express.json());
 
 // Status
-app.get('/api/status', (req: Request, res: Response) => {
+app.get('/api/status', (res: Response) => {
     res.json({ message: 'Backend server is running successfully!' });
 });
 
@@ -76,7 +80,7 @@ app.post('/api/login', async (req: Request, res: Response): Promise<any> => {
 
         const token = jwt.sign(
             { userId: user.id, email: user.email },
-            JWT_SECRET,
+            secret,
             { expiresIn: '24h' }
         );
 
@@ -95,6 +99,6 @@ app.post('/api/login', async (req: Request, res: Response): Promise<any> => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Listening on http://localhost:${PORT}`);
+app.listen(port, () => {
+    console.log(`Listening on http://localhost:${port}`);
 });
