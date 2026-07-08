@@ -51,11 +51,20 @@ export function RecipeShowcase() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <span className="inline-block px-4 py-1 bg-amber-100 text-amber-600 rounded-full mb-3" style={{ fontSize: "0.8125rem", fontWeight: 600 }}>
+          <span
+            className="inline-block px-4 py-1 bg-amber-100 text-amber-600 rounded-full mb-3"
+            style={{ fontSize: "0.8125rem", fontWeight: 600 }}
+          >
             YOUR VAULT
           </span>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-            <h2 className="text-amber-950" style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 800 }}>
+            <h2
+              className="text-amber-950"
+              style={{
+                fontSize: "clamp(1.75rem, 4vw, 2.5rem)",
+                fontWeight: 800,
+              }}
+            >
               Everything, beautifully organised
             </h2>
           </div>
@@ -74,13 +83,18 @@ export function RecipeShowcase() {
               >
                 <FolderOpen size={13} />
                 {g.label}
-                <span className={`px-1.5 py-0.5 rounded-md text-xs ${i === 0 ? "bg-amber-950/10" : "bg-amber-50 text-amber-500"}`}>
+                <span
+                  className={`px-1.5 py-0.5 rounded-md text-xs ${i === 0 ? "bg-amber-950/10" : "bg-amber-50 text-amber-500"}`}
+                >
                   {g.count}
                 </span>
               </button>
             ))}
-            <button className="text-amber-600 hover:text-amber-500 transition-colors shrink-0 text-right last:grow" style={{ fontWeight: 600, fontSize: "0.9375rem" }}>
-              Open  vault →
+            <button
+              className="text-amber-600 hover:text-amber-500 transition-colors shrink-0 text-right last:grow"
+              style={{ fontWeight: 600, fontSize: "0.9375rem" }}
+            >
+              Open vault →
             </button>
           </div>
         </motion.div>
@@ -101,20 +115,44 @@ export function RecipeShowcase() {
                   alt={r.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute top-3 left-3 px-2.5 py-1 bg-white/90 backdrop-blur-sm rounded-full" style={{ fontSize: "0.7rem", fontWeight: 600, color: "#92400e" }}>
+                <div
+                  className="absolute top-3 left-3 px-2.5 py-1 bg-white/90 backdrop-blur-sm rounded-full"
+                  style={{
+                    fontSize: "0.7rem",
+                    fontWeight: 600,
+                    color: "#92400e",
+                  }}
+                >
                   {r.emoji} {r.group}
                 </div>
-                <div className="absolute top-3 right-3 px-2.5 py-1 bg-amber-400/90 backdrop-blur-sm rounded-full text-amber-950" style={{ fontSize: "0.65rem", fontWeight: 700 }}>
+                <div
+                  className="absolute top-3 right-3 px-2.5 py-1 bg-amber-400/90 backdrop-blur-sm rounded-full text-amber-950"
+                  style={{ fontSize: "0.65rem", fontWeight: 700 }}
+                >
                   {r.source}
                 </div>
               </div>
 
               <div className="p-5">
-                <h3 className="text-amber-950 mb-3" style={{ fontSize: "1.0625rem", fontWeight: 700 }}>{r.title}</h3>
-                <div className="flex items-center gap-4 text-amber-600/70" style={{ fontSize: "0.8125rem" }}>
-                  <span className="flex items-center gap-1.5"><Clock size={13} /> {r.time}</span>
+                <h3
+                  className="text-amber-950 mb-3"
+                  style={{ fontSize: "1.0625rem", fontWeight: 700 }}
+                >
+                  {r.title}
+                </h3>
+                <div
+                  className="flex items-center gap-4 text-amber-600/70"
+                  style={{ fontSize: "0.8125rem" }}
+                >
+                  <span className="flex items-center gap-1.5">
+                    <Clock size={13} /> {r.time}
+                  </span>
                   <span className="flex items-center gap-1.5 ml-auto">
-                    <Heart size={13} className="fill-amber-300 text-amber-300" /> {r.likes} saves
+                    <Heart
+                      size={13}
+                      className="fill-amber-300 text-amber-300"
+                    />{" "}
+                    {r.likes} saves
                   </span>
                 </div>
               </div>

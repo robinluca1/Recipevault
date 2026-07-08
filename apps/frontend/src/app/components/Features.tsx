@@ -44,14 +44,29 @@ export function Features() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1 bg-amber-100 text-amber-600 rounded-full mb-4" style={{ fontSize: "0.8125rem", fontWeight: 600 }}>
+          <span
+            className="inline-block px-4 py-1 bg-amber-100 text-amber-600 rounded-full mb-4"
+            style={{ fontSize: "0.8125rem", fontWeight: 600 }}
+          >
             FEATURES
           </span>
-          <h2 className="text-amber-950" style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)", fontWeight: 800 }}>
-            From chaotic screenshots<br />to a beautiful vault
+          <h2
+            className="text-amber-950"
+            style={{
+              fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
+              fontWeight: 800,
+            }}
+          >
+            From chaotic screenshots
+            <br />
+            to a beautiful vault
           </h2>
-          <p className="mt-3 text-amber-700/70 max-w-xl mx-auto" style={{ fontSize: "1rem", lineHeight: 1.7 }}>
-            No more recipe tabs, pinned posts, or bookmarks you never find again.
+          <p
+            className="mt-3 text-amber-700/70 max-w-xl mx-auto"
+            style={{ fontSize: "1rem", lineHeight: 1.7 }}
+          >
+            No more recipe tabs, pinned posts, or bookmarks you never find
+            again.
           </p>
         </motion.div>
 
@@ -68,8 +83,18 @@ export function Features() {
               <div className="w-11 h-11 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center text-xl mb-4">
                 {f.emoji}
               </div>
-              <h3 className="text-amber-950 mb-2" style={{ fontSize: "1rem", fontWeight: 700 }}>{f.title}</h3>
-              <p className="text-amber-700/60" style={{ fontSize: "0.9rem", lineHeight: 1.65 }}>{f.desc}</p>
+              <h3
+                className="text-amber-950 mb-2"
+                style={{ fontSize: "1rem", fontWeight: 700 }}
+              >
+                {f.title}
+              </h3>
+              <p
+                className="text-amber-700/60"
+                style={{ fontSize: "0.9rem", lineHeight: 1.65 }}
+              >
+                {f.desc}
+              </p>
             </motion.div>
           ))}
         </div>

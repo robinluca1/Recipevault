@@ -39,10 +39,16 @@ export function Testimonials() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <span className="inline-block px-4 py-1 bg-amber-100 text-amber-600 rounded-full mb-4" style={{ fontSize: "0.8125rem", fontWeight: 600 }}>
+          <span
+            className="inline-block px-4 py-1 bg-amber-100 text-amber-600 rounded-full mb-4"
+            style={{ fontSize: "0.8125rem", fontWeight: 600 }}
+          >
             TESTIMONIALS
           </span>
-          <h2 className="text-amber-950" style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 800 }}>
+          <h2
+            className="text-amber-950"
+            style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 800 }}
+          >
             What home cooks are saying
           </h2>
         </motion.div>
@@ -59,17 +65,36 @@ export function Testimonials() {
             >
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(t.stars)].map((_, j) => (
-                  <Star key={j} size={14} className="text-amber-400 fill-amber-400" />
+                  <Star
+                    key={j}
+                    size={14}
+                    className="text-amber-400 fill-amber-400"
+                  />
                 ))}
               </div>
-              <p className="text-amber-800/80 mb-6" style={{ fontSize: "0.9375rem", lineHeight: 1.7 }}>"{t.text}"</p>
+              <p
+                className="text-amber-800/80 mb-6"
+                style={{ fontSize: "0.9375rem", lineHeight: 1.7 }}
+              >
+                "{t.text}"
+              </p>
               <div className="flex items-center gap-3">
-                <div className={`w-9 h-9 rounded-full ${t.color} flex items-center justify-center text-amber-900`} style={{ fontSize: "0.75rem", fontWeight: 700 }}>
+                <div
+                  className={`w-9 h-9 rounded-full ${t.color} flex items-center justify-center text-amber-900`}
+                  style={{ fontSize: "0.75rem", fontWeight: 700 }}
+                >
                   {t.avatar}
                 </div>
                 <div>
-                  <p className="text-amber-900" style={{ fontWeight: 600, fontSize: "0.875rem" }}>{t.name}</p>
-                  <p className="text-amber-400" style={{ fontSize: "0.8rem" }}>{t.handle}</p>
+                  <p
+                    className="text-amber-900"
+                    style={{ fontWeight: 600, fontSize: "0.875rem" }}
+                  >
+                    {t.name}
+                  </p>
+                  <p className="text-amber-400" style={{ fontSize: "0.8rem" }}>
+                    {t.handle}
+                  </p>
                 </div>
               </div>
             </motion.div>

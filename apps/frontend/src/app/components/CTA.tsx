@@ -17,21 +17,37 @@ export function CTA() {
 
           <div className="relative z-10 flex flex-col items-center gap-6">
             <div className="text-5xl">🔐</div>
-            <h2 className="text-amber-950" style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)", fontWeight: 800 }}>
+            <h2
+              className="text-amber-950"
+              style={{
+                fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
+                fontWeight: 800,
+              }}
+            >
               Start building your vault today
             </h2>
-            <p className="text-amber-900/70 max-w-md" style={{ fontSize: "1rem", lineHeight: 1.7 }}>
-              Free forever for up to 50 recipes. Upload your first screenshot and watch RecipeVault do the work — no credit card, no setup.
+            <p
+              className="text-amber-900/70 max-w-md"
+              style={{ fontSize: "1rem", lineHeight: 1.7 }}
+            >
+              Free forever for up to 50 recipes. Upload your first screenshot
+              and watch RecipeVault do the work — no credit card, no setup.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3">
-              <button className="flex items-center justify-center gap-2 px-7 py-3.5 bg-amber-950 hover:bg-amber-900 text-amber-50 rounded-xl transition-colors" style={{ fontWeight: 600 }}>
+              <button
+                className="flex items-center justify-center gap-2 px-7 py-3.5 bg-amber-950 hover:bg-amber-900 text-amber-50 rounded-xl transition-colors"
+                style={{ fontWeight: 600 }}
+              >
                 <Upload size={16} /> Upload your first recipe
               </button>
             </div>
 
             <p className="text-amber-800/60" style={{ fontSize: "0.8125rem" }}>
-              Already have an account? <span className="underline cursor-pointer hover:text-amber-900">Log in</span>
+              Already have an account?{" "}
+              <span className="underline cursor-pointer hover:text-amber-900">
+                Log in
+              </span>
             </p>
           </div>
         </motion.div>

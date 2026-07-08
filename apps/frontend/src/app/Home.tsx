@@ -8,18 +8,18 @@ import { CTA } from "./components/CTA";
 import { Footer } from "./components/Footer";
 
 export function Home() {
-    return (
-        <div className="min-h-screen" style={{ background: "#fffbeb" }}>
-            <Navbar />
-            <main>
-                <Hero />
-                <Features />
-                <ScanDemo />
-                <RecipeShowcase />
-                <Testimonials />
-                <CTA />
-            </main>
-            <Footer />
-        </div>
-    );
+  return (
+    <div className="min-h-screen" style={{ background: "#fffbeb" }}>
+      <Navbar />
+      <main>
+        <Hero />
+        <Features />
+        <ScanDemo />
+        <RecipeShowcase />
+        <Testimonials />
+        <CTA />
+      </main>
+      <Footer />
+    </div>
+  );
 }
