@@ -3,11 +3,13 @@ import cors from 'cors';
 import bcrypt from 'bcrypt';
 import pool from './db';
 import dotenv from 'dotenv';
+import jwt from 'jsonwebtoken';
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const JWT_SECRET = process.env.JWT_SECRET || 'fallback_secret';
 
 app.use(cors());
 app.use(express.json());
@@ -21,7 +23,6 @@ app.get('/api/status', (req: Request, res: Response) => {
 app.post('/api/register', async (req: Request, res: Response): Promise<any> => {
     const { email, password } = req.body;
 
-    // Check if user already exists in db
     if (!email || !password) {
         return res.status(400).json({ error: 'Please provide both email and password.' });
     }
@@ -48,6 +49,49 @@ app.post('/api/register', async (req: Request, res: Response): Promise<any> => {
     } catch (err: any) {
         console.error('Registration error:', err.message);
         res.status(500).json({ error: 'Server error during registration.' });
+    }
+});
+
+// Login
+app.post('/api/login', async (req: Request, res: Response): Promise<any> => {
+    const { email, password } = req.body;
+
+    if (!email || !password) {
+        return res.status(400).json({ error: 'Please provide both email and password.' });
+    }
+
+    try {
+        const result = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
+
+        if (result.rows.length === 0) {
+            return res.status(401).json({ error: 'Invalid email or password.' });
+        }
+
+        const user = result.rows[0];
+        const isPasswordValid = await bcrypt.compare(password, user.password_hash);
+
+        if (!isPasswordValid) {
+            return res.status(401).json({ error: 'Invalid email or password.' });
+        }
+
+        const token = jwt.sign(
+            { userId: user.id, email: user.email },
+            JWT_SECRET,
+            { expiresIn: '24h' }
+        );
+
+        res.json({
+            message: 'Login successful!',
+            token: token,
+            user: {
+                id: user.id,
+                email: user.email
+            }
+        });
+
+    } catch (err: any) {
+        console.error('Login error:', err.message);
+        res.status(500).json({ error: 'Server error during login.' });
     }
 });
 
